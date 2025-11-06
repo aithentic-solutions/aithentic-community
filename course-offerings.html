@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIThentic Training - Course Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .course-header {
+            padding: 25px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+            line-height: 1.3;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .course-header.blue {
+            background: linear-gradient(135deg, #0046ff 0%, #0066ff 100%);
+        }
+
+        .course-header.orange {
+            background: linear-gradient(135deg, #ff8c00 0%, #ffaa00 100%);
+        }
+
+        .course-header.purple {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+        }
+
+        .course-header.green {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+        }
+
+        .course-header.red {
+            background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+        }
+
+        .course-header.teal {
+            background: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%);
+        }
+
+        .course-header.indigo {
+            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+        }
+
+        .course-header.pink {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        .info-table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        .info-table tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .info-table td {
+            padding: 12px 8px;
+            vertical-align: top;
+        }
+
+        .info-table td:first-child {
+            font-weight: 600;
+            color: #555;
+            width: 35%;
+            font-size: 0.9em;
+        }
+
+        .info-table td:last-child {
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .description {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin-top: 15px;
+        }
+
+        .description p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 3px;
+        }
+
+        @media (max-width: 1200px) {
+            .courses-grid {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .course-header {
+                font-size: 1.1em;
+                padding: 20px;
+                min-height: 70px;
+            }
+            
+            .course-content {
+                padding: 20px;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 AIThentic Training</h1>
+            <p class="subtitle">Professional AI Course Catalog</p>
+        </header>
+        
+        <div class="courses-grid">
+            <!-- Course 1: AI for Non-Technicals -->
+            <div class="course-card">
+                <div class="course-header blue">
+                    AI FOR NON TECHNICALS
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Homemakers, lawyers, managers, students (arts)</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course is designed for nontechnical learners who want to understand and use Artificial Intelligence (AI) in their everyday lives — at work, school, or home. You don't need any background in coding or computer science; instead, the course focuses on how AI tools think, respond, and assist humans in solving daily problems. Through simple explanations, engaging examples, and hands-on activities, you'll explore how to use chatbots, image generators, voice assistants, and other AI-powered tools effectively. By the end of this course, you'll not only understand what AI is and how it works but also learn how to ask the right questions, think critically about AI outputs, and apply AI smartly to improve your productivity, creativity, and decision-making.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2: Boosting Productivity with AI -->
+            <div class="course-card">
+                <div class="course-header orange">
+                    BOOSTING PRODUCTIVITY WITH AI
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Professionals, managers, students, homemakers</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course teaches you how to reclaim hours in your day by leveraging AI tools that automate repetitive tasks, streamline workflows, and organize your digital life. You'll learn to use smart assistants for scheduling, AI-powered email managers to draft and prioritize messages, automation platforms that connect your favorite apps, and tools that summarize documents in seconds. Through practical exercises, you'll discover how to delegate mundane tasks to AI while maintaining control and quality. Whether you're managing a busy household, juggling multiple projects, or balancing work and study, this course will show you how to work smarter, reduce overwhelm, and create space for what truly matters.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3: Improve Critical Thinking with AI -->
+            <div class="course-card">
+                <div class="course-header purple">
+                    IMPROVE CRITICAL THINKING WITH AI
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Students, professionals, lawyers, business leaders</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course teaches you to use AI as an intellectual sparring partner that challenges your assumptions, explores alternative viewpoints, and strengthens your analytical reasoning. You'll learn techniques for prompting AI to play devil's advocate, identify logical fallacies in arguments, generate counterexamples to your theories, and help you see problems from multiple angles. Through thought-provoking exercises and real-world case studies, you'll discover how to leverage AI for scenario analysis, decision-making frameworks, and evaluating complex information. Rather than accepting AI outputs at face value, you'll develop the skills to question, verify, and synthesize information into deeper insights that enhance your judgment and problem-solving abilities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 4: Enhancing Quality of Your Writings with AI -->
+            <div class="course-card">
+                <div class="course-header green">
+                    ENHANCING QUALITY OF YOUR WRITINGS WITH AI
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Students, professionals, lawyers, anyone who writes regularly</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course elevates your writing across all formats — emails, reports, essays, proposals, and creative content — by teaching you to collaborate effectively with AI writing assistants. You'll learn how to refine grammar and punctuation effortlessly, adjust tone and style for different audiences, strengthen clarity and eliminate jargon, expand ideas when you're stuck, and maintain your unique voice while polishing your prose. Through hands-on editing sessions and before-and-after examples, you'll discover how AI can act as your personal editor, writing coach, and brainstorming partner. Whether you're drafting legal briefs, academic papers, business communications, or personal stories, you'll gain confidence in producing clear, compelling, error-free writing faster than ever before.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5: Boost Job Searches with AI -->
+            <div class="course-card">
+                <div class="course-header red">
+                    BOOST JOB SEARCHES WITH AI
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Students (graduating seniors), professionals (career changers or advancing)</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course empowers job seekers to stand out in competitive markets by leveraging AI tools throughout every stage of the job search process. You'll learn how to optimize resumes for applicant tracking systems while showcasing your unique strengths, craft personalized cover letters that resonate with hiring managers in minutes rather than hours, research companies and roles using AI-powered insights, prepare for interviews with AI mock interview tools that provide feedback, and network more effectively by using AI to identify connections and craft outreach messages. Through practical templates and step-by-step guidance, you'll build a modern job search toolkit that increases your visibility, saves countless hours, and helps you land interviews for roles you're genuinely excited about.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 6: AI Enabled Project Management -->
+            <div class="course-card">
+                <div class="course-header teal">
+                    AI ENABLED PROJECT MANAGEMENT
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Managers, professionals, business leaders, team leads</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course prepares project managers to harness AI for smarter planning, execution, and delivery of projects of any size. You'll explore AI tools that automate task assignments and resource allocation, predict project risks before they become problems, optimize timelines and identify critical path dependencies, enhance team collaboration with intelligent meeting summaries and action items, and generate status reports that keep stakeholders informed. Through real project simulations and case studies, you'll learn to integrate AI seamlessly into your existing project management workflows — whether you use Agile, Waterfall, or hybrid approaches. Discover how to lead projects more proactively, make data-driven decisions faster, and deliver results that exceed expectations while reducing manual overhead.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 7: AI Enabled Finance & Accounting -->
+            <div class="course-card">
+                <div class="course-header indigo">
+                    AI ENABLED FINANCE & ACCOUNTING
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Finance professionals, accounting teams, business leaders, bookkeepers</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This course equips finance and accounting professionals with AI tools that transform how you manage numbers, analyze trends, and make financial decisions. You'll learn to use AI for automated expense categorization and tracking, financial forecasting with predictive analytics, fraud detection and anomaly identification, intelligent financial reporting that highlights key insights, and cash flow optimization strategies. Through hands-on exercises with real financial scenarios, you'll discover how AI can handle tedious data entry and reconciliation while you focus on strategic analysis and decision-making. Whether you're managing personal finances, small business accounting, or corporate financial operations, you'll gain practical skills to work faster, reduce errors, and uncover opportunities hidden in your financial data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 8: AI for Business Leaders -->
+            <div class="course-card">
+                <div class="course-header pink">
+                    AI FOR BUSINESS LEADERS
+                </div>
+                <div class="course-content">
+                    <table class="info-table">
+                        <tr>
+                            <td>Expected Audience</td>
+                            <td>Business leaders, C-suite executives, senior managers, entrepreneurs</td>
+                        </tr>
+                        <tr>
+                            <td>Instructor</td>
+                            <td><span class="badge">TBD</span></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="description">
+                        <p>This strategic course prepares executives and senior leaders to navigate the AI revolution and position their organizations for competitive advantage. You'll explore how to identify high-impact AI opportunities aligned with business strategy, evaluate AI solutions and build vs. buy decisions, lead organizational change and foster AI adoption across teams, address ethical considerations including bias, privacy, and transparency, and measure ROI and success metrics for AI initiatives. Through executive-level case studies, interactive strategy sessions, and peer discussions, you'll develop a practical framework for AI transformation that balances innovation with risk management. Leave with an actionable roadmap for implementing AI in your organization — whether you're leading a startup, managing a department, or driving enterprise-wide digital transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
